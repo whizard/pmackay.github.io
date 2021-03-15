@@ -81,7 +81,7 @@
     },
     "headline": "Architecture | MyChat | Home","datePublished": "2021-03-13T00:00:00+00:00",
     "dateModified": "2021-03-13T00:00:00+00:00",
-    "wordCount":  126 ,
+    "wordCount":  313 ,
     "publisher": {
         "@type": "Person",
         "name": "Home",
@@ -280,7 +280,7 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
-        <span>1 min read</span>
+        <span>2 min read</span>
     </div>
     
     
@@ -324,21 +324,81 @@ messaging service. This architecture should provide enough clarity for developer
 <li>A basic understanding of right-sized services.</li>
 </ul>
 <hr>
+<h2 id="domains">Domains</h2>
+<p>The following are the top level domains:</p>
+<figure>
+    <img src="/images/domains.png"/> 
+</figure>
+
+<hr>
 <h2 id="components">Components</h2>
 <p>The MyChat service consists of the following components:</p>
+<ul>
+<li>
+<p>Account Management Service</p>
+<ul>
+<li>User Profile (name, email, phone, address, etc.)</li>
+<li>User Preferences (language, Timezone, etc.)</li>
+<li>Identity Service (SSO, MFA, etc.)</li>
+</ul>
+</li>
+<li>
+<p>Chat Spaces</p>
+<ul>
+<li>Manage chat Spaces (create, delete, modify, add/delete users)</li>
+<li></li>
+</ul>
+</li>
+<li>
+<p>Notification Service</p>
+<ul>
+<li>Handle communications with users via (email, SMS)
+<ul>
+<li>Notify if of new messages</li>
+<li>Invitation to join a chat Space</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Message Service</p>
+<ul>
+<li>Handle SSE for chat spaces</li>
+<li>Handle input of messages to chat spaces</li>
+</ul>
+</li>
+</ul>
 <hr>
 <h2 id="database-requirements">Database Requirements</h2>
-<hr>
-<h2 id="application-validation">Application Validation</h2>
-<hr>
-<h2 id="implementation-details">Implementation Details</h2>
+<p>Databases schemas should be designed based on the type of required queries.</p>
+<h3 id="account-management">Account Management</h3>
+<p>The Account Management domain has the following database queries:</p>
+<ul>
+<li>Get account information by account ID</li>
+</ul>
+<h3 id="chat-spaces">Chat Spaces</h3>
+<p>The Chat Spaces domain has the following database queries:</p>
+<h3 id="notifications">Notifications</h3>
+<p>The Notification domain has the following database queries:</p>
 <hr>
 <h2 id="questions-to-be-resolved">Questions to be Resolved</h2>
 <ul>
-<li><input disabled="" type="checkbox"> How</li>
+<li><input disabled="" type="checkbox"> How do determine the SSE &ldquo;capacity&rdquo; of servers?</li>
+<li><input disabled="" type="checkbox"> Do we need to setup GEO-located servers to meet the latency requirements?</li>
+<li><input disabled="" type="checkbox"> Can we use a &ldquo;wrapped&rdquo; Webview for desktop applications?</li>
+<li><input disabled="" type="checkbox"> How do we manage the encryption keys for encrypted data (when to rotate, who owns the private key etc.)</li>
 </ul>
 <hr>
 <h2 id="references">References</h2>
+<ul>
+<li><a href="https://www.w3.org/TR/eventsource/">W3C SSE</a></li>
+<li><a href="https://ably.com/topic/server-sent-events">SSE Deep Dive</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events">Mozilla SSE</a></li>
+<li><a href="https://medium.com/blogging-greymatter-io/server-sent-events-http-2-and-envoy-6927c70368bb">Quick Primer on SSE</a></li>
+<li><a href="https://github.com/r3labs/sse/tree/v2">Golang SSE Server and Client</a></li>
+<li><a href="https://medium.com/wesionary-team/server-sent-events-with-go-and-react-76df101a3efe">React SSE Client</a></li>
+<li><a href="https://github.com/bajro17/golang-simple-sse-chat/blob/master/templates/index.html">Simple Chat with SSE</a></li>
+</ul>
                     </div>
                     
                     <div class="my-4">
@@ -385,10 +445,15 @@ messaging service. This architecture should provide enough clarity for developer
         <li><a href="#assumptions">Assumptions</a></li>
       </ul>
     </li>
+    <li><a href="#domains">Domains</a></li>
     <li><a href="#components">Components</a></li>
-    <li><a href="#database-requirements">Database Requirements</a></li>
-    <li><a href="#application-validation">Application Validation</a></li>
-    <li><a href="#implementation-details">Implementation Details</a></li>
+    <li><a href="#database-requirements">Database Requirements</a>
+      <ul>
+        <li><a href="#account-management">Account Management</a></li>
+        <li><a href="#chat-spaces">Chat Spaces</a></li>
+        <li><a href="#notifications">Notifications</a></li>
+      </ul>
+    </li>
     <li><a href="#questions-to-be-resolved">Questions to be Resolved</a></li>
     <li><a href="#references">References</a></li>
   </ul>

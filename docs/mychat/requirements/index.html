@@ -81,7 +81,7 @@
     },
     "headline": "Requirements | MyChat | Home","datePublished": "2021-03-13T00:00:00+00:00",
     "dateModified": "2021-03-13T00:00:00+00:00",
-    "wordCount":  901 ,
+    "wordCount":  957 ,
     "publisher": {
         "@type": "Person",
         "name": "Home",
@@ -307,7 +307,7 @@
 <li>Simpler sign up process.</li>
 <li>Can suspend and resume messages.</li>
 <li>All messages are encrypted at rest and inflight and cannot be used for marketing purposes.</li>
-<li>Can set availability to all or a set of chat rooms.</li>
+<li>Can set availability to all or a set of chat Spaces.</li>
 </ul>
 <h2 id="vision">Vision</h2>
 <p>People can setup secure communication between trusted parties in a simple</p>
@@ -363,46 +363,49 @@ and wants a messaging service that &ldquo;guarantees&rdquo; privacy.</p>
 <hr>
 <h2 id="stories">Stories</h2>
 <p><strong>S.1</strong> I want to choose one of my current social account identities (Facebook, Twitter, Instragram etc.) to sign up.</p>
-<p><strong>5.2</strong> I want create multiple chat rooms.</p>
-<p><strong>5.3</strong> I want to invite people to join a chat room.</p>
-<p><strong>5.4</strong> I want to be invited to join a chat room.</p>
+<p><strong>5.2</strong> I want create multiple chat Spaces.</p>
+<p><strong>5.3</strong> I want to invite people to join a chat Space.</p>
+<p><strong>5.4</strong> I want to be invited to join a chat Space.</p>
 <p><strong>5.5</strong> When I go to a new device I want my settings to be synced to the new device.</p>
 <p><strong>5.6</strong> I want to be notified when I receive a new message.</p>
-<p><strong>5.7</strong> I want to know which chat room new messages are coming from.</p>
-<p><strong>5.8</strong> I want to remove myself from a chat room.</p>
-<p><strong>5.9</strong> I want to remove people from my chat room.</p>
-<p><strong>5.10</strong> I want to suspend receiving messages from a specific chat room.</p>
+<p><strong>5.7</strong> I want to know which chat Space new messages are coming from.</p>
+<p><strong>5.8</strong> I want to remove myself from a chat Space.</p>
+<p><strong>5.9</strong> I want to remove people from my chat Space.</p>
+<p><strong>5.10</strong> I want to suspend receiving messages from a specific chat Space.</p>
 <p><strong>5.11</strong> I want to resume receiving messages and &ldquo;catch up&rdquo; with all of the messages I have not seen.</p>
 <p><strong>5.12</strong> I want to know my messages are secure and not being used to track me for marketing purposes.</p>
-<p><strong>5.13</strong> I want to copy messages from one chat room to another.</p>
-<p><strong>5.14</strong> I want to indicate to all or to a selective set of chat rooms I am &ldquo;away&rdquo; and deliberately not responding to messages.</p>
-<p><strong>5.15</strong> I want to know if someone is &ldquo;typing&rdquo; a message when I am in a chat room.</p>
+<p><strong>5.13</strong> I want to copy messages from one chat Space to another.</p>
+<p><strong>5.14</strong> I want to indicate to all or to a selective set of chat Spaces I am &ldquo;away&rdquo; and deliberately not responding to messages.</p>
+<p><strong>5.15</strong> I want to know if someone is &ldquo;typing&rdquo; a message when I am in a chat Space.</p>
 <p><strong>5.16</strong> I want to know when (date) a message was typed.</p>
 <p><strong>5.17</strong> I want to turn off notifications of new messages.</p>
 <p><strong>5.18</strong> I want to be able to search for words/phrases in messages.</p>
-<p><strong>5.19</strong> I want to delete messages in a chat room.</p>
+<p><strong>5.19</strong> I want to delete messages in a chat Space.</p>
 <p><strong>5.20</strong> I want to edit a previous message.</p>
+<p><strong>5.21</strong> I want to see a list of all of my chat Spaces.</p>
+<p><strong>5.22</strong> I want to set my default chat Space so when I come into MyChat I am in that chat Space.</p>
 <hr>
 <h2 id="user-interface">User Interface</h2>
 <p><strong>U.1</strong> Login/Sign up Screen (TO BE CREATED)</p>
-<p><strong>U.2</strong> Create Chat Room (TO BE CREATED)</p>
+<p><strong>U.2</strong> Create Chat Space (TO BE CREATED)</p>
 <p><strong>U.3</strong> Notification of Messages (TO BE CREATED)</p>
 <hr>
 <h2 id="functional-requirements">Functional Requirements</h2>
 <p><strong>F.1</strong> Must provide SSO from Google, Facebook and Instagram.</p>
 <p><strong>F.2</strong> Must encrypt all messages inflight and at rest.</p>
-<p><strong>F.3</strong> Must allow users to manage their own chat rooms:</p>
+<p><strong>F.3</strong> Must allow users to manage their own chat Spaces:</p>
 <ul>
-<li>Create, delete and suspend chat rooms</li>
-<li>Allow certain people to invite others to a chat room</li>
-<li>Remove people from chat rooms</li>
+<li>Create, delete and suspend chat Spaces</li>
+<li>Allow certain people to invite others to a chat Space</li>
+<li>Remove people from chat Spaces</li>
 </ul>
 <p><strong>F.4</strong> Must retain messages for a period of time (Freemium 6 months, Paid 2 years).</p>
-<p><strong>F.5.</strong> Must provide a way to retrieve all messages in a chat room from given a date and time.</p>
+<p><strong>F.5.</strong> Must provide a way to retrieve all messages in a chat Space from given a date and time.</p>
+<p><strong>F.6</strong> The latency for sending a message and receiving a message in a give chat space MUST be fewer than 200 ms.</p>
 <hr>
 <h2 id="non-functional-requirements">Non-Functional Requirements</h2>
 <p><strong>N.1</strong> Must be cross-platform (Desktop - Mac/Windows/Linux, Mobile, Browser).</p>
-<p><strong>N.2</strong> Must be &ldquo;responsive&rdquo; when hundreds of people are in a single chat room.</p>
+<p><strong>N.2</strong> Must be &ldquo;responsive&rdquo; when hundreds of people are in a single chat Space.</p>
 <p><strong>N.3</strong> Must provide a security audit of all components.</p>
 <p><strong>N.4</strong> Must allow UTF8 characters in messages.</p>
 <p><strong>N.5</strong> Must be cost effective.</p>
@@ -419,13 +422,13 @@ and wants a messaging service that &ldquo;guarantees&rdquo; privacy.</p>
 <ul>
 <li>Provide a &ldquo;disconnected&rdquo; mode that allows messages to be created and sent when reconnected.</li>
 <li>Support multiple languages (PFIGS).</li>
-<li>Allow users to send messages across chat rooms.</li>
+<li>Allow users to send messages across chat Spaces.</li>
 </ul>
 <hr>
 <h2 id="notes">Notes</h2>
 <ul>
 <li>Need to setup a user experience exercise to evaluate UX.</li>
-<li>Do we need to allow users to &ldquo;theme/skin&rdquo; the chat rooms they create?</li>
+<li>Do we need to allow users to &ldquo;theme/skin&rdquo; the chat Spaces they create?</li>
 </ul>
 <hr>
 <h2 id="references">References</h2>
