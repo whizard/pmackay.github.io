@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang='en' ><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+<title>Requirements | MyChat | Home</title>
+<link rel="stylesheet" href="/css/eureka.min.css">
+<script defer src="/js/eureka.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js"
+   crossorigin></script>
+
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js"
+     crossorigin></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+   integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
+  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+
+<meta name="description"
+  content="Requirements for MyChat">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Docs",
+      "item":"/docs/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"MyChat",
+      "item":"/docs/mychat/"},{
+      "@type": "ListItem",
+      "position": 3 ,
+      "name":"Requirements",
+      "item":"/docs/mychat/requirements/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "/docs/mychat/requirements/"
+    },
+    "headline": "Requirements | MyChat | Home","datePublished": "2021-03-13T00:00:00+00:00",
+    "dateModified": "2021-03-13T00:00:00+00:00",
+    "wordCount":  901 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "Home",
+        },
+    "description": "Requirements for MyChat"
+}
+</script><meta property="og:title" content="Requirements | MyChat | Home" />
+<meta property="og:type" content="article" />
+
+
+
+<meta property="og:url" content="/docs/mychat/requirements/" />
+
+
+
+<meta property="og:description" content="Requirements for MyChat" />
+
+
+
+<meta property="og:locale" content="en" />
+
+
+
+
+<meta property="og:site_name" content="Home" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2021-03-13T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2021-03-13T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="docs" />
+
+
+
+
+<body class="flex flex-col min-h-screen">
+  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+    <div class="w-full max-w-screen-xl mx-auto"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="mr-6 text-primary-text text-xl font-bold">Home</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">Posts</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">Docs</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">Light</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">Dark</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">Auto</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            switchMode('Auto')
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+  </header>
+  <main class="flex-grow pt-16">
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+
+
+<div class="lg:pt-12">
+    <div class="flex flex-col md:flex-row bg-secondary-bg rounded">
+        <div class="md:w-1/4 lg:w-1/5 border-r">
+            <div class="sticky top-16 pt-6">
+                
+
+
+
+
+
+
+
+
+
+
+<div id="sidebar-title" class="md:hidden mx-4 px-2 pt-4 pb-2 md:border-b text-tertiary-text md:text-primary-text">
+    <span class="font-semibold">Table of Contents</span>
+    <i class="fas fa-caret-right ml-1"></i>
+</div>
+
+<div id="sidebar-toc"
+    class="hidden md:block overflow-y-auto mx-6 md:mx-0 pr-6 pt-2 md:max-h-doc-sidebar bg-primary-bg md:bg-transparent">
+    <div class="flex flex-wrap ml-4 -mr-2 p-2 bg-secondary-bg md:bg-primary-bg rounded">
+        <a class=" hover:text-eureka"
+            href="/docs/mychat/">MyChat</a>
+        
+        
+        
+
+
+    </div>
+    
+<ul class="pl-6">
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="/docs/mychat/architecture/">Architecture</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" text-eureka  hover:text-eureka"
+                href="/docs/mychat/requirements/">Requirements</a>
+        </div>
+        
+    </li>
+    
+    
+</ul>
+
+</div>
+
+
+
+
+
+            </div>
+
+        </div>
+        <div class="w-full md:w-3/4 lg:w-4/5 pb-8 pt-2 md:pt-8">
+            <div class="w-full lg:w-3/4 pl-6 ml-0 mr-auto">
+                <h1 class="font-bold text-3xl text-primary-text">Requirements</h1>
+                <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-03-13</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>5 min read</span>
+    </div>
+    
+    
+
+    
+</div>
+            </div>
+            <div class="flex">
+                <div class="w-full lg:w-3/4 px-6">
+                    
+                    
+                    <div class="content">
+                        <p><em>This document outlines the overall requirements for MyChat - a hypothetical chat/messaging system.</em></p>
+<figure>
+    <img src="/images/logo.png" width="100" height="200"/> 
+</figure>
+
+<h2 id="introduction">Introduction</h2>
+<p>This document outlines the functional and non-functional requirements for MyChat. The requirements follow the <a href="https://tools.ietf.org/html/rfc2119">RFC 2119</a> standard using MUST, MUST NOT, SHOULD and SHOULD NOT.</p>
+<p>An MVP of the MyChat service MUST include all MUST requirements.</p>
+<h2 id="goals">Goals</h2>
+<p>To provide a simple yet comprehensive text-based messaging system.</p>
+<h2 id="problems-to-be-solved">Problems To Be Solved</h2>
+<ul>
+<li>How do we differentiate MyChat from existing services?</li>
+<li>How do we scale to billions of users?</li>
+<li>How do we provide &ldquo;realtime&rdquo; messaging across multiple user devices?</li>
+<li>How do we secure messages at rest and inflight?</li>
+</ul>
+<h2 id="how-your-project-is-better-than-existing-solutions">How Your Project Is Better Than Existing Solutions</h2>
+<ul>
+<li>Simpler sign up process.</li>
+<li>Can suspend and resume messages.</li>
+<li>All messages are encrypted at rest and inflight and cannot be used for marketing purposes.</li>
+<li>Can set availability to all or a set of chat rooms.</li>
+</ul>
+<h2 id="vision">Vision</h2>
+<p>People can setup secure communication between trusted parties in a simple</p>
+<p>Engineers will efficiently develop products that make the company money. Their day-to-day work environment will be consistent across engineering teams. The services deployed will be developed and tested in environments that are consistent with the production environment. They will focus on programming and not on the details of how their code gets packaged and deployed.</p>
+<p>The developer experience will be &ldquo;self-serve&rdquo; and not require a cumbersome process to create new services and to acquire associated resources.</p>
+<hr>
+<h2 id="personas">Personas</h2>
+<p><img src="/images/kelly.jpeg" alt="Kelly Tort"></p>
+<p><strong>Name:</strong>                                                      <br>
+Kelly Tort</p>
+<p><strong>Role:</strong>
+End user</p>
+<p><strong>Age:</strong>
+22</p>
+<p><strong>Gender:</strong>
+Female</p>
+<p><strong>Location:</strong>
+Provo, Utah</p>
+<p><strong>Education:</strong>
+BS - English</p>
+<p><strong>Preferences</strong></p>
+<ul>
+<li>Uses mobile devices more than desktops</li>
+<li>Rarely uses email</li>
+<li>Likes to use emojis to &ldquo;sprinkle&rdquo; her messages</li>
+<li>Likes auto-completion of words when typing in a message</li>
+</ul>
+<p><strong>Objective(s):</strong>
+Kelly has family members and friends who she wants to keep in touch with. She wants to share what she is doing with others and to know what other people are doing. She wants a simple but secure messaging service to accomplish these objectives.</p>
+<hr>
+<p><img src="/images/acharya.jpeg" alt="Acharya Chakrabarti"></p>
+<p><strong>Name:</strong><br>
+Acharya Chakrabarti</p>
+<p><strong>Role:</strong>
+End user</p>
+<p><strong>Age:</strong>
+26</p>
+<p><strong>Gender:</strong>
+Male</p>
+<p><strong>Location:</strong>
+Walnut Creek, CA</p>
+<p><strong>Education:</strong>
+MS - Computer Science</p>
+<p><strong>Preferences</strong></p>
+<ul>
+<li>Uses mobile and desktop devices.</li>
+<li>Uses email.</li>
+<li>Likes to customize his applications (e.g., dark mode, background images)</li>
+</ul>
+<p><strong>Objective(s):</strong>
+Acharya has family and friends all over the world he wants to stay in contact. He is concerned about security
+and wants a messaging service that &ldquo;guarantees&rdquo; privacy.</p>
+<hr>
+<h2 id="stories">Stories</h2>
+<p><strong>S.1</strong> I want to choose one of my current social account identities (Facebook, Twitter, Instragram etc.) to sign up.</p>
+<p><strong>5.2</strong> I want create multiple chat rooms.</p>
+<p><strong>5.3</strong> I want to invite people to join a chat room.</p>
+<p><strong>5.4</strong> I want to be invited to join a chat room.</p>
+<p><strong>5.5</strong> When I go to a new device I want my settings to be synced to the new device.</p>
+<p><strong>5.6</strong> I want to be notified when I receive a new message.</p>
+<p><strong>5.7</strong> I want to know which chat room new messages are coming from.</p>
+<p><strong>5.8</strong> I want to remove myself from a chat room.</p>
+<p><strong>5.9</strong> I want to remove people from my chat room.</p>
+<p><strong>5.10</strong> I want to suspend receiving messages from a specific chat room.</p>
+<p><strong>5.11</strong> I want to resume receiving messages and &ldquo;catch up&rdquo; with all of the messages I have not seen.</p>
+<p><strong>5.12</strong> I want to know my messages are secure and not being used to track me for marketing purposes.</p>
+<p><strong>5.13</strong> I want to copy messages from one chat room to another.</p>
+<p><strong>5.14</strong> I want to indicate to all or to a selective set of chat rooms I am &ldquo;away&rdquo; and deliberately not responding to messages.</p>
+<p><strong>5.15</strong> I want to know if someone is &ldquo;typing&rdquo; a message when I am in a chat room.</p>
+<p><strong>5.16</strong> I want to know when (date) a message was typed.</p>
+<p><strong>5.17</strong> I want to turn off notifications of new messages.</p>
+<p><strong>5.18</strong> I want to be able to search for words/phrases in messages.</p>
+<p><strong>5.19</strong> I want to delete messages in a chat room.</p>
+<p><strong>5.20</strong> I want to edit a previous message.</p>
+<hr>
+<h2 id="user-interface">User Interface</h2>
+<p><strong>U.1</strong> Login/Sign up Screen (TO BE CREATED)</p>
+<p><strong>U.2</strong> Create Chat Room (TO BE CREATED)</p>
+<p><strong>U.3</strong> Notification of Messages (TO BE CREATED)</p>
+<hr>
+<h2 id="functional-requirements">Functional Requirements</h2>
+<p><strong>F.1</strong> Must provide SSO from Google, Facebook and Instagram.</p>
+<p><strong>F.2</strong> Must encrypt all messages inflight and at rest.</p>
+<p><strong>F.3</strong> Must allow users to manage their own chat rooms:</p>
+<ul>
+<li>Create, delete and suspend chat rooms</li>
+<li>Allow certain people to invite others to a chat room</li>
+<li>Remove people from chat rooms</li>
+</ul>
+<p><strong>F.4</strong> Must retain messages for a period of time (Freemium 6 months, Paid 2 years).</p>
+<p><strong>F.5.</strong> Must provide a way to retrieve all messages in a chat room from given a date and time.</p>
+<hr>
+<h2 id="non-functional-requirements">Non-Functional Requirements</h2>
+<p><strong>N.1</strong> Must be cross-platform (Desktop - Mac/Windows/Linux, Mobile, Browser).</p>
+<p><strong>N.2</strong> Must be &ldquo;responsive&rdquo; when hundreds of people are in a single chat room.</p>
+<p><strong>N.3</strong> Must provide a security audit of all components.</p>
+<p><strong>N.4</strong> Must allow UTF8 characters in messages.</p>
+<p><strong>N.5</strong> Must be cost effective.</p>
+<p><strong>N.6</strong> Should scale to support billions of users.</p>
+<hr>
+<h2 id="risks">Risks</h2>
+<ul>
+<li>Not providing a better messaging service than is currently available.</li>
+<li>It is too difficult to learn and setup.</li>
+<li>Not scaling to initial demand.</li>
+</ul>
+<hr>
+<h2 id="future-iterations">Future Iterations</h2>
+<ul>
+<li>Provide a &ldquo;disconnected&rdquo; mode that allows messages to be created and sent when reconnected.</li>
+<li>Support multiple languages (PFIGS).</li>
+<li>Allow users to send messages across chat rooms.</li>
+</ul>
+<hr>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Need to setup a user experience exercise to evaluate UX.</li>
+<li>Do we need to allow users to &ldquo;theme/skin&rdquo; the chat rooms they create?</li>
+</ul>
+<hr>
+<h2 id="references">References</h2>
+<p><a href="https://www.whoson.com/our-two-cents/the-history-of-live-chat-software/">History of chat</a></p>
+<p><a href="https://towcenter.gitbooks.io/guide-to-chat-apps/content/introductionthe_dawn_of/a_brief_history.html">Brief History of Chat Apps</a></p>
+                    </div>
+                    
+                    
+
+                    
+
+                    
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+        <span class="block font-bold">Previous</span>
+        <a href="/docs/mychat/architecture/" class="block">Architecture</a>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+    </div>
+</div>
+
+                    
+                </div>
+                
+                <div class="hidden lg:block lg:w-1/4">
+                    
+                    <div class="sticky top-16 z-10 hidden lg:block px-6 py-4  bg-secondary-bg pt-16 -mt-16 ">
+    <span class="text-lg font-semibold">On This Page</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6  pt-10 -mt-10 border-l ">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#goals">Goals</a></li>
+    <li><a href="#problems-to-be-solved">Problems To Be Solved</a></li>
+    <li><a href="#how-your-project-is-better-than-existing-solutions">How Your Project Is Better Than Existing Solutions</a></li>
+    <li><a href="#vision">Vision</a></li>
+    <li><a href="#personas">Personas</a></li>
+    <li><a href="#stories">Stories</a></li>
+    <li><a href="#user-interface">User Interface</a></li>
+    <li><a href="#functional-requirements">Functional Requirements</a></li>
+    <li><a href="#non-functional-requirements">Non-Functional Requirements</a></li>
+    <li><a href="#risks">Risks</a></li>
+    <li><a href="#future-iterations">Future Iterations</a></li>
+    <li><a href="#notes">Notes</a></li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+</div>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        enableStickyToc();
+    });
+</script>
+                    
+                </div>
+                
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        hljs.initHighlightingOnLoad();
+        changeSidebarHeight();
+        switchDocToc();
+    })
+</script>
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+    
+  </main>
+  <footer class="pl-scrollbar">
+    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text">&copy; 2021 <a href="https://pmackay.com/">Paul MacKay</a>
+ &middot;  Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+  </footer>
+</body>
+
+</html>

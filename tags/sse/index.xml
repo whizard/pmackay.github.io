@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SSE on Home</title>
+    <link>/tags/sse/</link>
+    <description>Recent content in SSE on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2021 &lt;a href=&#34;https://pmackay.com/&#34;&gt;Paul MacKay&lt;/a&gt;
+</copyright>
+    <lastBuildDate>Sat, 13 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/sse/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Architecture</title>
+      <link>/docs/mychat/architecture/</link>
+      <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/mychat/architecture/</guid>
+      <description>&lt;p&gt;&lt;em&gt;This document describes the overall architecture for MyChat - a hypothetical chat/messaging system.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>MyChat</title>
+      <link>/docs/mychat/</link>
+      <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/mychat/</guid>
+      <description>&lt;figure&gt;
+    &lt;img src=&#34;/images/logo.png&#34; width=&#34;100&#34; height=&#34;200&#34;/&gt; 
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;em&gt;A hypothetical chat/messaging system.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
