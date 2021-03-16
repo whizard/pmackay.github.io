@@ -81,7 +81,7 @@
     },
     "headline": "Architecture | MyChat | Home","datePublished": "2021-03-13T00:00:00+00:00",
     "dateModified": "2021-03-13T00:00:00+00:00",
-    "wordCount":  313 ,
+    "wordCount":  426 ,
     "publisher": {
         "@type": "Person",
         "name": "Home",
@@ -346,7 +346,6 @@ messaging service. This architecture should provide enough clarity for developer
 <p>Chat Spaces</p>
 <ul>
 <li>Manage chat Spaces (create, delete, modify, add/delete users)</li>
-<li></li>
 </ul>
 </li>
 <li>
@@ -363,11 +362,25 @@ messaging service. This architecture should provide enough clarity for developer
 <li>
 <p>Message Service</p>
 <ul>
-<li>Handle SSE for chat spaces</li>
-<li>Handle input of messages to chat spaces</li>
+<li>SSE Emitter for chat spaces</li>
+<li>Handle input of messages to be queued for chat spaces</li>
 </ul>
 </li>
 </ul>
+<h3 id="component-interactions">Component Interactions</h3>
+<h4 id="login">Login</h4>
+<p>A user may authenticate to MyChat via SSO. The following details that interaction:</p>
+<figure>
+    <img src="/images/sso.png" width="400" height="400"/> 
+</figure>
+
+<p>Once a user is logged in a token will be create that will be passed to all authenticated APIs.</p>
+<h3 id="sse-events">SSE Events</h3>
+<p>SSE handshake:</p>
+<figure>
+    <img src="/images/sse-event.png" width="550" height="500"/> 
+</figure>
+
 <hr>
 <h2 id="database-requirements">Database Requirements</h2>
 <p>Databases schemas should be designed based on the type of required queries.</p>
@@ -375,11 +388,20 @@ messaging service. This architecture should provide enough clarity for developer
 <p>The Account Management domain has the following database queries:</p>
 <ul>
 <li>Get account information by account ID</li>
+<li>Modify account information.</li>
+<li>Delete (may just flag a user as inactive unless deletion required by PII/GDPR)</li>
 </ul>
 <h3 id="chat-spaces">Chat Spaces</h3>
 <p>The Chat Spaces domain has the following database queries:</p>
-<h3 id="notifications">Notifications</h3>
-<p>The Notification domain has the following database queries:</p>
+<ul>
+<li>Get all Chat Spaces for a given account ID</li>
+<li>Add account ID to a given Chat Space</li>
+<li>Delete account ID from a given Chat Space</li>
+<li>Delete Chat Space for a given account ID</li>
+<li>Modify Chat Space attributes (TBD)</li>
+<li>Get messages starting from a given date from a Chat Space</li>
+<li>Delete messages starting from a given date from a Chat Space (depending on governance regulations)</li>
+</ul>
 <hr>
 <h2 id="questions-to-be-resolved">Questions to be Resolved</h2>
 <ul>
@@ -446,12 +468,20 @@ messaging service. This architecture should provide enough clarity for developer
       </ul>
     </li>
     <li><a href="#domains">Domains</a></li>
-    <li><a href="#components">Components</a></li>
+    <li><a href="#components">Components</a>
+      <ul>
+        <li><a href="#component-interactions">Component Interactions</a>
+          <ul>
+            <li><a href="#login">Login</a></li>
+          </ul>
+        </li>
+        <li><a href="#sse-events">SSE Events</a></li>
+      </ul>
+    </li>
     <li><a href="#database-requirements">Database Requirements</a>
       <ul>
         <li><a href="#account-management">Account Management</a></li>
         <li><a href="#chat-spaces">Chat Spaces</a></li>
-        <li><a href="#notifications">Notifications</a></li>
       </ul>
     </li>
     <li><a href="#questions-to-be-resolved">Questions to be Resolved</a></li>
